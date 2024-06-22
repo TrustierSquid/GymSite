@@ -1,0 +1,11 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Arial";
+}
+
+:root {
+  --primaryColor: #2F3C7E;
+  --secondaryColor: #FBEAEB;
+}/*# sourceMappingURL=index.css.map */
