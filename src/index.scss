@@ -10,3 +10,129 @@
     --secondaryColor: #FBEAEB;
 }
 
+@mixin nav-button{
+    color: white;
+    padding: 1rem;
+    background-color: blue;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 150ms;
+    &:hover {
+        background-color: darkblue;
+    }
+}
+
+/* 
+
+ NAVBAR
+
+ */
+
+#nav  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.3rem;
+    background-color: var(--primaryColor);
+    font-size: 1.1rem;
+
+    // Brand logo
+    h2 {
+        color: white;
+    }
+
+    ul > li  {
+        padding: 1rem;
+        display: inline;
+        a {
+            text-decoration: none;
+            color: white;
+            transition: 150ms;
+            &:hover {
+                color: red;
+            }
+        }
+    }
+
+    #join-button {
+        @include nav-button()
+    }
+
+    #nav-button {
+        display: none;
+    }
+}
+
+#nav-mobile-menu {
+    display: none;
+    pointer-events: none;
+
+}
+
+
+@media (max-width: 768px) {
+    // navlist replaced with mobile nav
+    #nav {
+        justify-content: space-between;
+        ul {
+            display: none;
+            list-style-type: none;
+        }
+
+        #join-button {
+            display: none;
+        }
+        
+        #nav-button {
+            padding: 1rem;
+            display: block;
+        }
+    }
+
+    #nav-mobile-menu {
+        position: absolute;
+        background-color: black;
+        display: flex;
+        align-items: start;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        // when navbtn clicked, this will reset to 0%
+        right: -50%;
+        transition: 150ms;
+        pointer-events: all;
+        justify-content: center;
+        font-size: 1.5rem;
+
+        ul {
+            list-style-type: none;
+        }
+        ul > li {
+            padding: 2rem;
+            a {
+                text-decoration: none;
+                color: white;
+                transition: 250ms;
+                &:hover {
+                    color: var(--primaryColor);
+                }
+            }
+        }
+
+        #exit-mobile-nav {
+            font-size: 2rem;
+            color: white;
+            background: none;
+            border: none;
+            float: right;
+            margin: 2rem;
+            transition: 250ms;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--primaryColor);
+            }
+        }
+    }
+}
