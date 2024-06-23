@@ -17,6 +17,8 @@
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
+    font-weight: 900;
+    font-size: large;
     transition: 150ms;
     &:hover {
         background-color: darkblue;
@@ -49,6 +51,7 @@
             text-decoration: none;
             color: white;
             transition: 150ms;
+            font-weight: 700;
             &:hover {
                 color: red;
             }
@@ -67,7 +70,7 @@
 #nav-mobile-menu {
     display: none;
     pointer-events: none;
-
+    transition: 250ms;
 }
 
 
@@ -93,7 +96,7 @@
     #nav-mobile-menu {
         position: absolute;
         background-color: black;
-        display: flex;
+        // display: flex;
         align-items: start;
         width: 50%;
         height: 100%;
