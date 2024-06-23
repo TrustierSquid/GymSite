@@ -7,7 +7,8 @@
 
 :root {
   --primaryColor: #2F3C7E;
-  --secondaryColor: #FBEAEB;
+  --secondaryColor: #ffdbdd;
+  --accentColor: #ffc800;
 }
 
 /* 
@@ -55,12 +56,16 @@
 }
 #nav #nav-button {
   display: none;
+  height: 100px;
+  margin: 0;
+  cursor: pointer;
 }
 
 #nav-mobile-menu {
   display: none;
   pointer-events: none;
   transition: 250ms;
+  z-index: 4;
 }
 
 @media (max-width: 768px) {
@@ -117,5 +122,85 @@
   }
   #nav-mobile-menu #exit-mobile-nav:hover {
     color: var(--primaryColor);
+  }
+}
+/* 
+
+HERO SECTION
+
+*/
+#hero {
+  display: flex;
+  padding: 2rem;
+  background-color: var(--primaryColor);
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+}
+#hero #hero-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  max-width: 550px;
+}
+#hero #hero-group h1 {
+  color: white;
+  font-size: 3rem;
+  z-index: 1;
+}
+#hero #hero-group p {
+  color: white;
+  z-index: 1;
+}
+#hero img {
+  height: 500px;
+  position: absolute;
+  opacity: 0.5;
+  right: 55px;
+}
+#hero #hero-btn {
+  color: white;
+  padding: 1rem;
+  background-color: blue;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: large;
+  transition: 150ms;
+  margin-top: 2rem;
+  z-index: 1;
+}
+#hero #hero-btn:hover {
+  background-color: darkblue;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    align-items: center;
+  }
+  #hero #hero-group h1 {
+    font-size: 2.5rem;
+  }
+  #hero #hero-btn {
+    color: white;
+    padding: 1rem;
+    background-color: blue;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: large;
+    transition: 150ms;
+    margin: 2rem;
+  }
+  #hero #hero-btn:hover {
+    background-color: darkblue;
+  }
+}
+@media (max-width: 600px) {
+  #hero #hero-group h1 {
+    font-size: 2.1rem;
   }
 }/*# sourceMappingURL=index.css.map */

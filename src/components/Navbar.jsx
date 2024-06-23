@@ -1,7 +1,5 @@
 import { useEffect, useState, useRef } from "react";
 
-
-
 export default function Navbar() {
     
     // grabbing the menu
@@ -24,14 +22,14 @@ export default function Navbar() {
   return (
     <>
       <nav id="nav">
-        <h2>WEIGHTWORLD</h2>
+        <h2>WEIGHTWORLD  <img style={{height: '20px'}} src="src/icon/weight.png"></img></h2>
         <ul id="nav-links">
           <li><a href="#">Our Locations</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Training</a></li>
           <li><a href="#">Amenities</a></li>
         </ul>
-        <button id="nav-button" onClick={handleMobileNav}>NAV</button>
+        <img src="src/icon/navIcon.png" id="nav-button" onClick={handleMobileNav}/>
         <button type="button" id="join-button" onClick={handleMobileNav}>JOIN US</button>
       </nav>
       <section ref={mobileNavMenu} id="nav-mobile-menu">
