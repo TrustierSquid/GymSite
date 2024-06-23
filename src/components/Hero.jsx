@@ -13,8 +13,6 @@ export default function Hero() {
                     <button id="hero-btn">JOIN NOW</button>
                 </div>
                 <img src="src/img/workingout1.png" alt="" />
-                <div>
-                </div>
             </main>
         </>
     )

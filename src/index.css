@@ -9,6 +9,7 @@
   --primaryColor: #2F3C7E;
   --secondaryColor: #ffdbdd;
   --accentColor: #ffc800;
+  --heroBGColor: #041720;
 }
 
 /* 
@@ -41,7 +42,6 @@
   color: red;
 }
 #nav #join-button {
-  color: white;
   padding: 1rem;
   background-color: blue;
   border: none;
@@ -56,8 +56,8 @@
 }
 #nav #nav-button {
   display: none;
-  height: 100px;
   margin: 0;
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -95,6 +95,7 @@
     pointer-events: all;
     justify-content: center;
     font-size: 1.5rem;
+    overflow: hidden;
   }
   #nav-mobile-menu ul {
     list-style-type: none;
@@ -155,11 +156,10 @@ HERO SECTION
 #hero img {
   height: 500px;
   position: absolute;
-  opacity: 0.5;
+  opacity: 0.35;
   right: 55px;
 }
 #hero #hero-btn {
-  color: white;
   padding: 1rem;
   background-color: blue;
   border: none;
@@ -170,6 +170,7 @@ HERO SECTION
   transition: 150ms;
   margin-top: 2rem;
   z-index: 1;
+  color: var(--accentColor);
 }
 #hero #hero-btn:hover {
   background-color: darkblue;
@@ -184,7 +185,6 @@ HERO SECTION
     font-size: 2.5rem;
   }
   #hero #hero-btn {
-    color: white;
     padding: 1rem;
     background-color: blue;
     border: none;
@@ -202,5 +202,78 @@ HERO SECTION
 @media (max-width: 600px) {
   #hero #hero-group h1 {
     font-size: 2.1rem;
+  }
+}
+/* 
+
+BENEFITS SECTION
+
+*/
+#benefits {
+  background-image: url(svg/polygon-scatter-haikei.svg);
+  max-height: 2000px;
+  color: white;
+  padding: 3rem;
+  display: flex;
+  gap: 5rem;
+}
+#benefits #title-card {
+  font-size: 2rem;
+}
+#benefits #title-card p {
+  font-size: 1.5rem;
+}
+#benefits .desktop-icons {
+  height: 50px;
+}
+#benefits .amenities {
+  background-color: var(--primaryColor);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#benefits .amenities h3 {
+  font-size: 2rem;
+}
+#benefits .amenities p {
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  #benefits {
+    background-image: none;
+    background-color: var(--heroBGColor);
+    padding: 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    font-size: default;
+  }
+  #benefits #title-card {
+    font-size: 1rem;
+  }
+  #benefits #title-card h1 {
+    color: var(--accentColor);
+  }
+  #benefits .desktop-icons {
+    display: none;
+  }
+  #benefits .amenities {
+    background: none;
+    padding: 0rem;
+    box-shadow: none;
+  }
+  #benefits .amenities h3 {
+    text-align: left;
+    font-size: 1.2rem;
+    border-bottom: #2F3C7E 2px solid;
+  }
+  #benefits .amenities p {
+    font-weight: lighter;
   }
 }/*# sourceMappingURL=index.css.map */

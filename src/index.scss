@@ -9,10 +9,10 @@
     --primaryColor: #2F3C7E;
     --secondaryColor: #ffdbdd;
     --accentColor: #ffc800;
+    --heroBGColor: #041720;
 }
 
 @mixin nav-button{
-    color: white;
     padding: 1rem;
     background-color: blue;
     border: none;
@@ -60,13 +60,14 @@
     }
 
     #join-button {
-        @include nav-button()
+        @include nav-button();
+        
     }
 
     #nav-button {
         display: none;
-        height: 100px;
         margin: 0;
+        font-size: 2rem;
         cursor: pointer;
     }
 }
@@ -112,6 +113,7 @@
         pointer-events: all;
         justify-content: center;
         font-size: 1.5rem;
+        overflow: hidden;
 
         ul {
             list-style-type: none;
@@ -182,7 +184,7 @@ HERO SECTION
     img {
         height: 500px;
         position: absolute;
-        opacity: 0.5;
+        opacity: 0.35;
         right: 55px;
     }
     
@@ -190,6 +192,7 @@ HERO SECTION
         @include nav-button();
         margin-top: 2rem;
         z-index: 1;
+        color: var(--accentColor);
     }
 }
 
@@ -224,4 +227,100 @@ HERO SECTION
             }
         }
     }
+}
+
+
+
+/* 
+
+BENEFITS SECTION
+
+*/
+
+
+#benefits {
+    background-image: url(svg/polygon-scatter-haikei.svg);
+    max-height: 2000px;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    gap: 5rem;
+
+    #title-card {
+        font-size: 2rem;
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .desktop-icons {
+        height: 50px;
+    }
+
+    .amenities {
+        background-color: var(--primaryColor);
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        h3 {
+            font-size: 2rem;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            padding: 1rem;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    #benefits {
+        background-image: none;
+        background-color: var(--heroBGColor);
+        padding: 3rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 7rem;
+        font-size: default;
+        
+        #title-card {
+            font-size: 1rem;
+
+            h1 {
+                color: var(--accentColor);
+            }
+        }
+
+        .desktop-icons {
+            display: none;
+        }
+        
+        .amenities {
+            background: none;
+            padding: 0rem;
+            box-shadow: none;
+
+            h3 {
+                text-align: left;
+                font-size: 1.2rem;
+                border-bottom: #2F3C7E 2px solid;
+            }
+
+            p {
+                font-weight: lighter;
+            }
+        }
+        
+    }
+}
+
+
+@media (max-width: 600px) {
+    
 }
