@@ -419,3 +419,35 @@ MEMEBRSHIP COMPONENT
         
     }
 }
+
+
+/* 
+
+FOOTER COMPONENT
+
+*/
+
+
+#footer {
+    background-color: rgb(156, 156, 156);
+    color: white;
+    height: 200px;
+    font-size: 1rem;
+    display: flex;
+    gap: 4rem;
+    justify-content: space-around;
+    padding: 2rem;
+    align-items: center;
+
+    .footerSection {
+        ul {
+            list-style-type: none;
+        }
+    }
+}
+
+@media (max-width: 868px) {
+    #footer {
+        
+    }
+}

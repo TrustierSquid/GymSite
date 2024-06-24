@@ -363,4 +363,23 @@ MEMEBRSHIP COMPONENT
   #membership .membership-option p {
     text-align: center;
   }
+}
+/* 
+
+FOOTER COMPONENT
+
+*/
+#footer {
+  background-color: rgb(156, 156, 156);
+  color: white;
+  height: 200px;
+  font-size: 1rem;
+  display: flex;
+  gap: 4rem;
+  justify-content: space-around;
+  padding: 2rem;
+  align-items: center;
+}
+#footer .footerSection ul {
+  list-style-type: none;
 }/*# sourceMappingURL=index.css.map */
