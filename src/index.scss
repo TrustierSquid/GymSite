@@ -7,7 +7,7 @@
 
 :root {
     --primaryColor: #2F3C7E;
-    --secondaryColor: #ffdbdd;
+    --secondaryColor: #fde0e0;
     --accentColor: #ffc800;
     --heroBGColor: #041720;
 }
@@ -21,6 +21,7 @@
     font-weight: 900;
     font-size: large;
     transition: 150ms;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     &:hover {
         background-color: darkblue;
     }
@@ -61,7 +62,7 @@
 
     #join-button {
         @include nav-button();
-        
+        color: var(--accentColor);
     }
 
     #nav-button {
@@ -80,7 +81,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     // navlist replaced with mobile nav
     #nav {
         justify-content: space-between;
@@ -198,13 +199,16 @@ HERO SECTION
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     #hero {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+
         #hero-group {
             h1 {
                 font-size: 2.5rem;
+                text-align: center
             }
 
         }
@@ -278,7 +282,7 @@ BENEFITS SECTION
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     #benefits {
         background-image: none;
         background-color: var(--heroBGColor);
@@ -321,6 +325,97 @@ BENEFITS SECTION
 }
 
 
-@media (max-width: 600px) {
+
+/* 
+
+MEMEBRSHIP COMPONENT
+
+*/
+
+#membership {
+    background-color: white;
+    padding: 3rem;
+    max-height: 2000px;
+    display: flex;
+    gap: 3rem;
+
+    p {
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    #title {
+        h2 {
+            font-size: 3.2rem;
+        }
+
+    }
     
+    .information-membership {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        a {
+            color: var(--primaryColor);
+        }
+    }
+
+    .membership-option {
+        border-radius: 1rem;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        padding: 1.5rem;
+        text-align: left;
+        
+        h2 {
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-size: 1rem;
+            
+        }
+        
+        
+        button {
+            @include nav-button();
+            color: var(--accentColor);
+        }
+    }
+    
+    .membership-option:nth-of-type(2) {
+        background-color: var(--primaryColor);
+        color: white;
+    }
+    
+    .membership-option:nth-of-type(3) {
+        background-color: #ffc800;
+        color: black;
+        
+    }
+}
+
+@media (max-width: 868px) {
+    #membership {
+        text-align: center;
+        flex-direction: column;
+        gap: 2rem;
+        
+        #title {
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+    
+        }
+        .membership-option {
+            max-height: 500px;
+
+            p {
+                text-align: center;
+            }
+        }
+        
+        
+    }
 }

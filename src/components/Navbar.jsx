@@ -34,7 +34,7 @@ export default function Navbar() {
         </ul>
         {/* nav button must have id of #nav-button */}
         <h1 id="nav-button" onClick={handleMobileNav} style={{color: 'white'}}>&#9776;</h1>
-        <button type="button" id="join-button" onClick={handleMobileNav}>JOIN US</button>
+        <button type="button" id="join-button" onClick={handleMobileNav}>JOIN NOW</button>
       </nav>
       <section ref={mobileNavMenu} id="nav-mobile-menu">
         <ul>

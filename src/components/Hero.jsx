@@ -12,6 +12,7 @@ export default function Hero() {
                     <p>Try WeightWorld for free and receive a free workout plan with a 30 minute FREE training session on us! Ready to give it a try?</p>
                     <button id="hero-btn">JOIN NOW</button>
                 </div>
+                <div></div>
                 <img src="src/img/workingout1.png" alt="" />
             </main>
         </>
